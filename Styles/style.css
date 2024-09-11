@@ -244,6 +244,7 @@ main {
             & tbody td {
                 height: 3.8rem;
                 border-bottom: 1px solid var(--clr-dark);
+                
             }
 
             & tbody tr:last-child td{
@@ -464,6 +465,7 @@ main {
     }
 
     main {
+
         .insights {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -472,8 +474,9 @@ main {
         }
 
         & .recent-order {
-            padding: 30px;
+            
             margin: 0 auto;
+            width: 100%;
         }
 
        
@@ -482,7 +485,6 @@ main {
     .date {
         margin-left: 2rem;
     }
-
    
 
 }
