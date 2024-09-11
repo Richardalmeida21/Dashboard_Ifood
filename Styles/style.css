@@ -16,12 +16,17 @@ aside {
         justify-content: space-around;
         align-items: center;
         margin-top: 1.4rem;
+        border-radius: 20px;
+       
+        
     }
 
     & .logo {
         display: flex;
         gap: 1rem;
         color: var(--clr-danger);
+        padding: .5rem;
+    
     }
 
     .close span {
@@ -391,8 +396,9 @@ main {
         z-index: 3;
         background: var(--clr-white);
         display: none;
+        animation: menuAni 1s forwards;
 
-        & .aside h3{
+        & .sidebar h3{
             display: inline;
         }
 
@@ -415,6 +421,21 @@ main {
         font-size: 35px;
        }
 
+    }
+
+    @keyframes menuAni {
+        to {
+            left: 0;
+        }
+    }
+
+    .right {
+        margin: 0;
+        text-align: center;
+    }
+
+    .recent-order {
+        text-align: center;
     }
 
     .right .top {
@@ -456,6 +477,10 @@ main {
         }
 
        
+    }
+
+    .date {
+        margin-left: 2rem;
     }
 
    
