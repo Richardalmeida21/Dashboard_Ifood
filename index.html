@@ -29,9 +29,10 @@
                     <h2>Parceiro Ifood</h2>
                 </div>
 
-                <div class="close">
+                <div class="close" id="close_btn">
                     <span class="material-symbols-sharp">close</span>
                 </div>
+
 
             </div>
             <!--End top-->
@@ -91,7 +92,7 @@
 
         <!-- Main section start -->
         <main>
-           <h1>Dashboard</h1>
+           <h1>DASHBOARD</h1>
 
            <div class="date">
             <input type="date">
@@ -104,13 +105,13 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Total de vendas</h3>
-                            <h1>R$25,023</h1>
+                            <h1>R$35,324</h1>
                         </div>
                         <div class="progress">
                             <svg>
                                 <circle r="30" cy="40" cx="40"></circle>
                             </svg>
-                            <div class="number">80%</div>
+                            <div class="number">100%</div>
                         </div>
                     </div>
                     <small>Este mês</small>
@@ -123,13 +124,13 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Gastos</h3>
-                            <h1>R$20,254</h1>
+                            <h1>R$28,569</h1>
                         </div>
                         <div class="progress">
                             <svg>
                                 <circle r="30" cy="40" cx="40"></circle>
                             </svg>
-                            <div class="number">80%</div>
+                            <div class="number">21.14%</div>
                         </div>
                     </div>
                     <small>Este mês</small>
@@ -141,14 +142,14 @@
                     <span class="material-symbols-sharp">stacked_line_chart</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Renda Total</h3>
-                            <h1>R$30,000</h1>
+                            <h3>Lucro Bruto</h3>
+                            <h1>R$6,755</h1>
                         </div>
                         <div class="progress">
                             <svg>
                                 <circle r="30" cy="40" cx="40"></circle>
                             </svg>
-                            <div class="number">80%</div>
+                            <div class="number">19.14%</div>
                         </div>
                     </div>
                     <small>Este mês</small>
@@ -222,11 +223,103 @@
 
         <!-- Right section start -->
         <div class="right">
-            
+
+            <div class="top">
+
+                <button id="menu_bar">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+
+                <div class="theme-toggler ">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>User</b></p>
+                        <p>Admin</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="Images/images/profile-1.jpg" alt="Foto de perfil">
+                    </div>
+                </div>
+            </div>
+            <!--End top-->
+
+            <div class="sales-analytics">
+
+                <h2>Métrica de vendas</h2>
+
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right-text">
+                        <div class="info">
+                            <h4>Vendas orgânicas</h4>
+                            <small class="text-muted">Última semana</small>
+                        </div>
+                        <h5 class="danger">-15%</h5>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right-text">
+                        <div class="info">
+                            <h4>Vendas com combos</h4>
+                            <small class="text-muted">Última semana</small>
+                        </div>
+                        <h5 class="success">+17%</h5>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right-text">
+                        <div class="info">
+                            <h4>Vendas promocionais</h4>
+                            <small class="text-muted">Última semana</small>
+                        </div>
+                        <h5 class="danger">-20%</h5>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="item onlion">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right-text">
+                        <div class="info">
+                            <h4>Vendas com cupom</h4>
+                            <small class="text-muted">Última venda a 2h</small>
+                        </div>
+                        <h5 class="success">+30%</h5>
+                    </div>
+                    
+                </div>
+            </div>
+
         </div>
         <!-- Right section end -->
 
     </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

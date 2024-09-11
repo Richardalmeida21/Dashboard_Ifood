@@ -23,12 +23,13 @@ aside {
         gap: 1rem;
         color: var(--clr-danger);
     }
+
+    .close span {
+        display: none;
+    }
     
 }
 
-aside .top .div.close {
-    display: none;
-}
 
 /*********SIDEBAR*********/
 
@@ -95,6 +96,8 @@ aside .sidebar a span.msg_count {
     font-size: 11px;
     border-radius: var(--border-radius-1);
 }
+
+
 
 /* Start Main Section Style*/
 
@@ -169,13 +172,14 @@ main {
 
             & .number {
                 position: absolute;
-                top: 5%;
-                left: 5%;
+                top: 7%;
+                left: 6%;
                 height: 100%;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-size: .9rem;
             }
         }
 
@@ -194,12 +198,17 @@ main {
 
         & .sales svg circle {
             stroke-dashoffset: 10;
-            stroke-dasharray: 150;
+            stroke-dasharray: 300;
         }
 
         & .expenses svg circle {
-            stroke-dashoffset: 0;
-            stroke-dasharray: 150;
+            stroke-dashoffset: 50;
+            stroke-dasharray: 120;
+        }
+
+        & .income svg circle {
+            stroke-dashoffset: 140;
+            stroke-dasharray: 200;
         }
 
     }
@@ -247,5 +256,208 @@ main {
             margin: 1rem;
         }
     }
+
+}
+
+/*Start Right Section Style*/
+
+.right {
+    margin-top: 1.4rem;
+    margin-left: -1.2rem;
+    margin-right:.7rem;
+
+    & h2 {
+        color: var(--clr-dark);
+    }
+
+    & .top {
+        display:flex;
+        justify-content: start;
+        gap: 2rem;
+    }
+
+    & button{
+        display: none;
+    }
+
+    & .theme-toggler {
+        background-color: var(--clr-white);
+        display: flex;
+        justify-content: space-between;
+        height: 1.6rem;
+        width: 4.2rem;
+        cursor: pointer;
+        border-radius: var(--border-radius-1);
+    }
+
+    & .theme-toggler span {
+        font-size: 1.2rem;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .theme-toggler span.active {
+        background-color: var(--clr-primary);
+        color: #fff;
+    }
+
+    .profile {
+        display: flex;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .info h3, .item h3 {
+        color: var(--clr-dark);
+    }
+
+    /*Sales Analytics Styles*/
+    .sales-analytics {
+        margin-top:2rem;
+      
+
+        & .item {
+            background-color: var(--clr-white);
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            justify-content: space-between;
+            padding: 1.4rem var(--card-padding);
+            margin: 10px 0;
+            width: 100%;
+            margin-bottom: .8rem;
+            padding: 1.4rem var(--card-padding);
+            border-radius: var(--border-radius-1);
+            box-shadow: var(--box-shadow);
+
+            & .icon {
+                background-color: var(--clr-danger);
+                color: var(--clr-white);
+                padding: .2rem;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                align-items: center;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+/*Media Query*/
+
+@media screen and (max-width:1200px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 14rem;
+    }
+
+    aside {
+
+    & .sidebar h3 {
+            display: none;
+        }
+    
+    & .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    }
+
+    main {
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}
+
+/*Media Query For Phones*/
+
+@media screen and (max-width: 768px) {
+   .container {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+   }
+
+   aside {
+        position: fixed;
+        width: 18rem;
+        z-index: 3;
+        background: var(--clr-white);
+        display: none;
+
+        & .aside h3{
+            display: inline;
+        }
+
+        &.sidebar a {
+            width: 100%;
+            height: 3.4rem;
+       }
+
+       & .logo h2 {
+        display: inline;
+       }
+
+       
+
+       & .close span {
+        display: inline;
+        position: absolute;
+        right:0;
+        margin-right:30px;
+        font-size: 35px;
+       }
+
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .8rem;
+        background: var(--clr-white);
+        width: 100%;
+        height: 4.6rem;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--clr-white);
+        margin: 0;
+
+        & button {
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            position: absolute;
+            color: var(--clr-dark);
+            left: 1rem;
+        }
+    }
+
+    main {
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.6rem;
+            padding: 40px;
+        }
+
+        & .recent-order {
+            padding: 30px;
+            margin: 0 auto;
+        }
+
+       
+    }
+
+   
 
 }

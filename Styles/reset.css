@@ -109,7 +109,11 @@ b {
   font-size: 0.75rem;
 }
 
-.profile-photo {
+.danger {
+  color: var(--clr-danger);
+}
+
+.profile-photo img {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
