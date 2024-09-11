@@ -2,16 +2,17 @@ const sideMenu = document.querySelector('aside');
 const menuBtn = document.querySelector('#menu_bar');
 const closeBtn = document.querySelector('#close_btn');
 const themeToggle = document.querySelector('.theme-toggler');
+const sidebarLinks = document.querySelectorAll('.sidebar a');
 
 menuBtn.addEventListener('click', () => {
     if (window.innerWidth <= 768) {
-        sideMenu.style.display = 'block';
+        sideMenu.classList.add('active');
     }
 });
 
 closeBtn.addEventListener('click', () => {
     if (window.innerWidth <= 768) {
-        sideMenu.style.display = 'none';
+        sideMenu.classList.remove('active');
     }
 });
 
