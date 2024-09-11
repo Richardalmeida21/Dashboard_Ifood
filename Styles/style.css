@@ -204,4 +204,48 @@ main {
 
     }
 
+    & .recent-order {
+        margin-top: 2rem;
+
+        & h2 {
+            color: var(--clr-dark);
+        }
+
+        & table {
+            background-color: var(--clr-white);
+            width: 100%;
+            border-radius: var(--card-border-radius);
+            padding: var(--card-padding);
+            text-align: center;
+            box-shadow:var(--box-shadow);
+            transition: all .3s ease;
+            color: var(--clr-dark);
+
+            & tbody tr {
+                height: 3.8rem;
+                border-bottom: 1px solid var(--clr-white);
+                color: var(--clr-dark-variant);
+            }
+
+            & tbody td {
+                height: 3.8rem;
+                border-bottom: 1px solid var(--clr-dark);
+            }
+
+            & tbody tr:last-child td{
+                border: none;
+            }
+        }
+
+        & table:hover {
+            box-shadow: none;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            margin: 1rem;
+        }
+    }
+
 }
