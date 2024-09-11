@@ -1,0 +1,97 @@
+
+.container {
+    display: grid;
+    width: 96%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+    margin: 0 auto;
+}
+
+aside {
+    height: 100vh;
+
+    & .top {
+        background-color: var(--clr-white);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1.4rem;
+    }
+
+    & .logo {
+        display: flex;
+        gap: 1rem;
+        color: var(--clr-danger);
+    }
+    
+}
+
+aside .top .div.close {
+    display: none;
+}
+
+/*********SIDEBAR*********/
+
+aside .sidebar {
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top: 1rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all .1s ease-in-out;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    margin-left: 0;
+    border-left: 5px solid var(--clr-primary);
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--clr-primary);
+}
+
+aside .sidebar a:hover {
+    color: var(--clr-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: .5rem;
+    transition: .5s ease;
+}
+
+aside .sidebar a span.msg_count {
+    background-color: var(--clr-danger);
+    color: var(--clr-white);
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
