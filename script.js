@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Aqui você pode adicionar qualquer lógica de validação ou processamento do formulário
 
         // Redireciona para index.html
-        window.location.href = 'index.html';
+        window.location.href = 'dashboard.html';
     });
 });
