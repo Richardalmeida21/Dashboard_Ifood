@@ -31,3 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.querySelector('form').onsubmit = function(e) {
+    if (document.getElementById('email').value === '') {
+        alert('Por favor, insira seu e-mail.');
+        e.preventDefault();
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Aqui você pode adicionar qualquer lógica de validação ou processamento do formulário
+
+        // Redireciona para index.html
+        window.location.href = 'index.html';
+    });
+});
